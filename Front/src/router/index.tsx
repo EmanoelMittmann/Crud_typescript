@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../components/organisms/Home";
 import Login from "../components/organisms/Login";
+import Tasks from "../components/organisms/Tasks";
 
 const Router = () => {
   return (
@@ -9,6 +10,7 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home/>}/>
+          <Route path="/tasks" element={<Tasks/>}/>
         </Routes>
       </BrowserRouter>
   );

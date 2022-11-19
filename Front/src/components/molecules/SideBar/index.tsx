@@ -5,7 +5,6 @@ import {
   Drawer,
   DrawerCloseButton,
   DrawerContent,
-  DrawerHeader,
   DrawerOverlay,
   Text,
   WrapItem,
@@ -14,11 +13,13 @@ import { EditIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { openModal } from "../../../Redux/Slice";
 import { RootState } from "../../../Redux/Store/store";
+import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {
   const { isOpen }: any = useSelector<RootState>((state) => state.Modal);
-  console.log("Open: ", isOpen);
   const dispatch = useDispatch();
+  const navigate = useNavigate()
+
   return (
     <>
       <Drawer
@@ -52,10 +53,18 @@ const SideBar = () => {
           <Button
             size="lg"
             transition="all 300ms ease"
-            _hover={{ background: "gray", margin: "5px", color:'white'}}
+            leftIcon={<i className="bi bi-house"></i>}
+            _hover={{ background: "red", color:'white'}}
+            _focusWithin={{
+              borderLeft:'white 10px solid',
+              background:'red',
+              color:'white'
+            }}
             colorScheme="white"
             color='black'
+            margin='5px'
             borderRadius="none"
+            onClick={() => navigate('/home')}
           >
             Dashboard
           </Button>
@@ -63,19 +72,32 @@ const SideBar = () => {
             size="lg"
             transition="all 300ms ease"
             leftIcon={<EditIcon/>}
-            _hover={{ background: "gray", margin: "5px",color:'white' }}
+            _hover={{ background: "red",color:'white' }}
+            _focusWithin={{
+              borderLeft:'white 10px solid',
+              background:'red',
+              color:'white'
+            }}
             colorScheme="white"
             color='black'
+            margin='5px'
             borderRadius="none"
+            onClick={() => navigate('/tasks')}
           >
             Tasks
           </Button>
           <Button
             size="lg"
             transition="all 300ms ease"
-            _hover={{ background: "gray", margin: "5px",color:'white' }}
-            colorScheme="white"
+            leftIcon={<i className="bi bi-person"></i>}
+            _hover={{ background: "red",color:'white' }}
+            _focusWithin={{
+              borderLeft:'white 10px solid',
+              background:'red',
+              color:'white'
+            }}colorScheme="white"
             color='black'
+            margin='5px'
             borderRadius="none"
           >
             Customers
@@ -83,9 +105,16 @@ const SideBar = () => {
           <Button
             size="lg"
             transition="all 300ms ease"
-            _hover={{ background: "gray", margin: "5px",color:'white'}}
+            leftIcon={<i className="bi bi-bar-chart-fill"></i>}
+            _hover={{ background: "red",color:'white'}}
+            _focusWithin={{
+              borderLeft:'white 10px solid',
+              background:'red',
+              color:'white'
+            }}
             colorScheme="white"
             color='black'
+            margin='5px'
             borderRadius="none"
           >
             Analitics
@@ -93,19 +122,33 @@ const SideBar = () => {
           <Button
             size="lg"
             transition="all 300ms ease"
-            _hover={{ background: "gray", margin: "5px",color:'white'}}
+            leftIcon={<i className="bi bi-person-lines-fill"></i>}
+            _hover={{ background: "red",color:'white'}}
+            _focusWithin={{
+              borderLeft:'white 10px solid',
+              background:'red',
+              color:'white'
+            }}
             colorScheme="white"
             color='black'
+            margin='5px'
             borderRadius="none"
           >
             Leads
           </Button>
           <Button
             size="lg"
+            leftIcon={<i className="bi bi-columns-gap"></i>}
             transition="all 300ms ease"
-            _hover={{ background: "gray", margin: "5px",color:'white'}}
+            _hover={{ background: "red",color:'white'}}
+            _focusWithin={{
+              borderLeft:'white 10px solid',
+              background:'red',
+              color:'white'
+            }}
             colorScheme="white"
             color='black'
+            margin='5px'
             borderRadius="none"
           >
             Projects
@@ -113,9 +156,16 @@ const SideBar = () => {
           <Button
             size="lg"
             transition="all 300ms ease"
-            _hover={{ background: "gray", margin: "5px",color:'white'}}
+            leftIcon={<i className="bi bi-flag-fill"></i>}
+            _hover={{ background: "red",color:'white'}}
+            _focusWithin={{
+              borderLeft:'white 10px solid',
+              background:'red',
+              color:'white'
+            }}
             colorScheme="white"
             color='black'
+            margin='5px'
             borderRadius="none"
           >
             Reports
@@ -123,10 +173,18 @@ const SideBar = () => {
           <Button
             size="lg"
             transition="all 300ms ease"
-            _hover={{ background: "gray", margin: "5px",color:'white'}}
+            leftIcon={<i className="bi bi-door-closed"></i>}
+            _hover={{ background: "red",color:'white'}}
+            _focusWithin={{
+              borderLeft:'white 10px solid',
+              background:'red',
+              color:'white'
+            }}
             colorScheme="white"
             color='black'
+            margin='5px'
             borderRadius="none"
+            onClick={() => navigate('/')}
           >
             Logout
           </Button>

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../components/organisms/Home";
 import Login from "../components/organisms/Login";
-import Tasks from "../components/organisms/Tasks";
+import Tasks from "../components/pages/Modules/Tasks";
 
 const Router = () => {
   return (

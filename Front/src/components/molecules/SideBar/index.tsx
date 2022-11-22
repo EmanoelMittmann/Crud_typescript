@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { EditIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
-import { openModal } from "../../../Redux/Slice";
+import { openModal } from "../../../Redux/Slice/Task";
 import { RootState } from "../../../Redux/Store/store";
 import { useNavigate } from "react-router-dom";
 
@@ -82,7 +82,7 @@ const SideBar = () => {
             color='black'
             margin='5px'
             borderRadius="none"
-            onClick={() => navigate('/tasks')}
+            onClick={() => navigate('/Tasks')}
           >
             Tasks
           </Button>
@@ -99,6 +99,7 @@ const SideBar = () => {
             color='black'
             margin='5px'
             borderRadius="none"
+            onClick={() => navigate('/Customers')}
           >
             Customers
           </Button>

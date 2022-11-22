@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { StateModal } from "../Slice";
+import { StateClient } from "../Slice/customers";
+import { StateModal } from "../Slice/Task";
 
 export const store = configureStore({
     reducer:{
-        Modal:StateModal.reducer
+        Modal:StateModal.reducer,
+        Client: StateClient.reducer,
     }
 })
 

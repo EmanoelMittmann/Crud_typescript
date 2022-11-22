@@ -1,7 +1,7 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Avatar, Box, Flex, Text, WrapItem } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
-import { openModal } from "../../../Redux/Slice";
+import { openModal } from "../../../Redux/Slice/Task";
 
 const NavBar = () => {
     
